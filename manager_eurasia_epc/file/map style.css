@@ -1,0 +1,47 @@
+#map {
+            height: 500px;
+        }
+        #deleteBtn, #showUserLocationBtn, #copyBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #showUserLocationBtn {
+            background-color: #4CAF50;
+        }
+        #copyBtn {
+            background-color: #2196F3;
+        }
+        #deleteBtn:disabled, #showUserLocationBtn:disabled, #copyBtn:disabled {
+            background-color: #ccc;
+        }
+        #coordinates {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 250px;
+            background-color: #f9f9f9;
+        }
+		 /* هدر */
+       .header {
+  background: rgba(255, 255, 255, 0.57);
+  color: #333;
+  width: 100%;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+  border-radius: 10px;
+  transition: box-shadow 0.6s cubic-bezier(.79, .21, .06, .81);
+}

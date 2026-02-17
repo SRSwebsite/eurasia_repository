@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>فرم ثبت و انتشار پروژه</title>
+	 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="file/form_manager.css"> <!-- لینک به فایل CSS -->
+    
+</head>
+<body>
+<div class="container">
+        
+        
+        <iframe id="unique-siteFrame" class="unique-iframe" src="map.html" title="نمایش سایت"></iframe>
+    </div>
+<button id="sidebar-toggle"><i class="fas fa-bars"></i></button>
+ <div id="sidebar">
+    <header>
+      <span>فرم ثبت و انتشار پروژه</span>
+    </header>
+   <div class="content">
+   
+  
+	    <div class="content">
+      <div class="accordion">
+       <button type="button">پنل دسترسی سریع</button>
+
+        <div class="panel">
+		
+		<a href="#" onclick="loadInIframe('map.html')">
+  نقشه
+</a>
+
+<a href="#" onclick="loadInIframe('gallery_manager_quick.html')">
+ گالری پروژه ها مدیریت
+</a>
+
+		<a href="#" onclick="loadInIframe('gallery_public_quick.html')">
+  گالری پروژه های انتشار یافته
+</a>
+
+		
+		
+         <a href="#" onclick="loadInIframe('https://docs.google.com/spreadsheets/d/e/2PACX-1vQJjy_KnFnIb1BPktZQ3y59yJl--Poy_UA4EpwJkRipLk5pRlnaNRQTDAeRslGcX78PeCqpt1R3CxmU/pubhtml?gid=0&single=true')">
+  جدول ثبت پروژه ها
+</a>
+
+<a href="#" onclick="loadInIframe('https://docs.google.com/spreadsheets/d/e/2PACX-1vT0E0QLho-bMZVxVRl7TnCkUQfEjur0zeJ2p8o4kNTx-q2JkoLhtRqwqYT9oLFWt9fXUhgvWbUZStOJ/pubhtml?gid=0&single=true')">
+  جدول ثبت اعضا
+</a>
+ <a href="#" onclick="loadInIframe('pro_uploader_quick.html')">
+  نمایش مخزن پروژه ها
+</a>
+ <a href="#" onclick="loadInIframe('edit_table_quick.html')">
+  پنل ویرایش جدول
+</a>
+
+<!-- فیلد ورودی با متن ثابت -->
+        <label for="variableInput">پیش نمایش اسناد پروژه</label><br>
+        <input type="text" id="variableInput" class="unique-input" placeholder="عنوان پروژه" required><br><br>
+		
+        <button id="unique-button" class="unique-button" onclick="loadSite()">نمایش</button>
+		
+		
+		 <input type="hidden" id="combinedText" name="combinedText">
+
+		
+		  
+        </div>
+      </div>
+    </div>
+    </div>
+	
+     <div class="accordion">
+ <button type="button" onclick="toggleAccordion()">فرم_1</button>
+
+  <div class="panel" id="accordionPanel">
+  
+    <form id="myForm" method="POST">
+	 
+      
+		<label for="projectTitle_l">عنوان اصلی پروژه</label>
+    <input type="text" id="projectTitle_l" name="projectTitle_l" placeholder="عنوان اول">
+		
+		<label for="variableInput3">عنوان دوم پروژه</label><br>
+<input type="text" id="variableInput3" placeholder="عنوان دوم" required><br><br>
+
+<label for="variableInput">عنوان آلبوم پروژه</label><br>
+        <input type="text" id="variableInput2" placeholder="عنوان آلبوم مستندات قابل انتشار پروژه" required><br><br>
+
+
+ 
+	
+	
+		<label for="projectArea">بودجه</label><br>
+<input type="text" id="projectAreaInput" class="project-area" name="projectArea" placeholder="بودجه"><br><br>
+
+      <div>
+        <label for="projectTitle">زمان انقضاء آگهی:</label>
+        <input type="text" id="projectTitle" name="projectTitle"  placeholder="مثلا 10 روز "><br><br>
+       
+</div>
+
+ <div>
+        <label for="projectCoordinates">مختصات پروژه:</label>
+        <input type="text" id="projectCoordinates" name="projectCoordinates" placeholder="35.7123, 51.3732">
+      </div>
+</div>
+<div class="accordion">
+ <button type="button" onclick="toggleAccordion()">فرم_2</button>
+
+  <div class="panel" id="accordionPanel">
+   <label>سطح دسترسی پروژه</label><br>
+
+<input type="radio" id="status_open" name="projectTitle_a" value="🌍">
+<label for="status_open">عمومی 🌍</label><br>
+
+<input type="radio" id="status_closed" name="projectTitle_a" value="🔒">
+<label for="status_closed">اختصاصی 🔒</label><br>
+
+<input type="radio" id="status_vip" name="projectTitle_a" value="⛔">
+<label for="status_vip">خاتمه ⛔</label><br>
+
+
+        <label for="projectTitle_b">شرکت ارائه دهنده پروژه:</label>
+    <input type="text" id="projectTitle_b" name="projectTitle_b" placeholder="نام شرکت">
+       
+	   <label for="projectTitle_c">شرکت واسط:</label>
+    <input type="text" id="projectTitle_c" name="projectTitle_c" placeholder="نام واسط یا مدیریت">
+      
+	  <label for="projectTitle_d">توضیحات:</label>
+    <input type="text" id="projectTitle_d" name="projectTitle_d" placeholder="توضیحات اختصاصی">
+ 
+     
+	  
+</div>
+</div>
+
+ <div class="accordion">
+ <button type="button" onclick="toggleAccordion()">آیدی ها</button>
+
+  <div class="panel" id="accordionPanel">
+  
+    <label for="projectTitle_e">آی دی فایل پروژه</label>
+    <input type="text" id="projectTitle_e" name="projectTitle_e" placeholder="آی دی فایل پروژه">
+	
+	 <label for="projectTitle_f">آی دی کاور پروژه</label>
+    <input type="text" id="projectTitle_f" name="projectTitle_f" placeholder="آی دی عکس یا ویدئو کاور">
+	
+	 <label for="projectTitle_g">آی دی عکس اول</label>
+    <input type="text" id="projectTitle_g" name="projectTitle_g" placeholder="آی دی عکس اول">
+	
+	 <label for="projectTitle_h">آی دی عکس دوم</label>
+    <input type="text" id="projectTitle_h" name="projectTitle_h" placeholder="آی دی عکس دوم">
+	
+	 <label for="projectTitle_i">آی دی عکس سوم</label>
+    <input type="text" id="projectTitle_i" name="projectTitle_i" placeholder="آی دی عکس سوم">
+	
+	 <label for="projectTitle_j">آی دی عکس چهارم</label>
+    <input type="text" id="projectTitle_j" name="projectTitle_j" placeholder="آی دی عکس چهارم">
+	
+	 <label for="projectTitle_k">آی دی عکس پنجم</label>
+    <input type="text" id="projectTitle_k" name="projectTitle_k" placeholder="آی دی عکس پنجم">
+   
+   </div>
+</div>
+      <div>
+       
+        <input type="hidden" id="combinedText2" name="combinedText">
+        <input type="hidden" id="categories" name="categories">
+        <input type="hidden" id="formId" name="formId" value="فرم یک">
+      </div>
+   
+ <div class="accordion">
+  <button type="button" onclick="toggleAccordion()">معادن_منابع_انرژی</button>
+
+  <div class="panel" id="accordionPanel">
+        <!-- پنل آکاردئونی دسته اول: نوع کاربری -->
+		
+       
+		
+		
+		  <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">منابع و معادن</div>
+            <div class="accordion-content">
+                <label><input type="checkbox" name="userType[]" value="تاسیس"> نفت</label><br>
+                <label><input type="checkbox" name="userType[]" value="توسعه"> گاز</label><br>
+                <label><input type="checkbox" name="userType[]" value="بهره برداری"> پتروشیمی</label><br>
+				<label><input type="checkbox" name="userType[]" value="اورهال"> نیروگاه</label><br>
+				<label><input type="checkbox" name="userType[]" value="لجستیک و زیرساختی"> سدسازی</label><br>
+				<label><input type="checkbox" name="userType[]" value="ذخیره سازی"> انرژی</label><br>
+				<label><input type="checkbox" name="userType[]" value="فروش"> واردات</label><br>
+				<label><input type="checkbox" name="userType[]" value="خرید"> صادرات</label><br>
+			
+		
+            </div>
+        </div>
+		
+	
+<div class="accordion">
+    <div class="accordion-header">پروژه‌های انرژی و نیروگاه</div>
+    <div class="accordion-content">
+        <label><input type="checkbox" name="energyProjects[]" value="نیروگاه خورشیدی"> نیروگاه خورشیدی</label><br>
+        <label><input type="checkbox" name="energyProjects[]" value="نیروگاه بادی"> نیروگاه بادی</label><br>
+        <label><input type="checkbox" name="energyProjects[]" value="نیروگاه زیست‌توده"> نیروگاه زیست‌توده</label><br>
+        <label><input type="checkbox" name="energyProjects[]" value="نیروگاه هیدروژنی"> نیروگاه هیدروژنی</label><br>
+        <label><input type="checkbox" name="energyProjects[]" value="نیروگاه حرارتی"> نیروگاه حرارتی</label><br>
+        <label><input type="checkbox" name="energyProjects[]" value="نیروگاه سیکل ترکیبی"> نیروگاه سیکل ترکیبی</label><br>
+        <label><input type="checkbox" name="energyProjects[]" value="تأسیسات انتقال و توزیع انرژی"> تأسیسات انتقال و توزیع انرژی</label><br>
+        <label><input type="checkbox" name="energyProjects[]" value="پروژه‌های بهینه‌سازی انرژی و بهره‌وری شبکه"> پروژه‌های بهینه‌سازی انرژی و بهره‌وری شبکه</label><br>
+    </div>
+</div>
+
+
+<div class="accordion">
+    <div class="accordion-header">پروژه‌های معدن و صنایع معدنی</div>
+    <div class="accordion-content">
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="اکتشاف و شناسایی ذخایر معدنی">
+            اکتشاف و شناسایی ذخایر معدنی
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="استخراج معادن روباز">
+            استخراج معادن روباز
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="استخراج معادن زیرزمینی">
+            استخراج معادن زیرزمینی
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="استخراج و استحصال مواد معدنی">
+            استخراج و استحصال مواد معدنی
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="فرآوری و پرعیارسازی مواد معدنی">
+            فرآوری و پرعیارسازی مواد معدنی
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="کارخانه‌های فرآوری و صنایع معدنی">
+            کارخانه‌های فرآوری و صنایع معدنی
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="زیرساخت‌های معدنی و پشتیبان">
+            زیرساخت‌های معدنی و پشتیبان (راه دسترسی، برق، آب، کمپ‌ها)
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="پروژه‌های لجستیک و حمل مواد معدنی">
+            لجستیک و حمل‌ونقل مواد معدنی
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="مدیریت باطله و پسماند معدنی">
+            مدیریت باطله و پسماند معدنی
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="بازسازی و احیای معادن">
+            بازسازی، احیا و بستن معادن
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="miningProjects[]" value="ایمنی، HSE و سیستم‌های هوشمند معدنی">
+            ایمنی، HSE و سیستم‌های هوشمند معدنی
+        </label><br>
+    </div>
+</div>
+
+		</div>
+        </div>
+		
+		
+				
+<div class="accordion">
+  <button type="button" onclick="toggleAccordion()">عمران_زیرساخت شهری</button>
+
+  <div class="panel" id="accordionPanel">
+        <!-- پنل آکاردئونی دسته دوم: نوع سازه -->
+     
+		
+			 <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">ساختمانی</div>
+            <div class="accordion-content">
+				
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">مسکونی</label><br>
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">تجاری</label><br>
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">اداری</label><br>
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">خدماتی</label><br>
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">صنعتی</label><br>
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">مرکز خرید</label><br>
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">گردشگری</label><br>
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">هتل</label><br>
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">بیمارستان</label><br>
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">آموزشی</label><br>
+				<label><input type="checkbox" name="userType[]" value="آب و فاضلاب صنعتی">چند منظوره</label><br>
+            </div>
+        </div>
+
+	  
+		 		<div class="accordion">
+    <div class="accordion-header" onclick="toggleAccordion(this)">زیرساخت شهری و تاسیسات</div>
+    <div class="accordion-content">
+        <label><input type="checkbox" name="urbanInfrastructure[]" value="آب و فاضلاب شهری"> آب و فاضلاب شهری</label><br>
+        <label><input type="checkbox" name="urbanInfrastructure[]" value="آب و فاضلاب صنعتی"> آب و فاضلاب صنعتی</label><br>
+        <label><input type="checkbox" name="urbanInfrastructure[]" value="سامانه‌های هوشمند آبیاری"> سامانه‌های هوشمند آبیاری</label><br>
+        <label><input type="checkbox" name="urbanInfrastructure[]" value="مدیریت منابع آب کشاورزی"> مدیریت منابع آب کشاورزی</label><br>
+        <label><input type="checkbox" name="urbanInfrastructure[]" value="برق شهری و شبکه انتقال"> برق شهری و شبکه انتقال</label><br>
+        <label><input type="checkbox" name="urbanInfrastructure[]" value="گاز شهری و خطوط لوله"> گاز شهری و خطوط لوله</label><br>
+        <label><input type="checkbox" name="urbanInfrastructure[]" value="مخابرات ثابت و موبایل"> مخابرات ثابت و موبایل</label><br>
+        <label><input type="checkbox" name="urbanInfrastructure[]" value="اینترنت و شبکه‌های داده"> اینترنت و شبکه‌های داده</label><br>
+        <label><input type="checkbox" name="urbanInfrastructure[]" value="سیستم‌های روشنایی شهری"> سیستم‌های روشنایی شهری</label><br>
+        <label><input type="checkbox" name="urbanInfrastructure[]" value="سیستم‌های مدیریت پسماند و تصفیه هوا"> سیستم‌های مدیریت پسماند و تصفیه هوا</label><br>
+       
+    </div>
+</div>
+<div class="accordion">
+    <div class="accordion-header">پروژه‌های جاده‌سازی و راهسازی</div>
+    <div class="accordion-content">
+        <label>
+            <input type="checkbox" name="roadProjects[]" value="راه‌های شهری و معابر اصلی">
+            راه‌های شهری و معابر اصلی
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="roadProjects[]" value="بزرگراه‌ها و آزادراه‌های شهری">
+            بزرگراه‌ها و آزادراه‌های شهری
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="roadProjects[]" value="جاده‌های بین‌شهری">
+            جاده‌های بین‌شهری
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="roadProjects[]" value="آزادراه‌ها و محورهای ترانزیتی">
+            آزادراه‌ها و محورهای ترانزیتی
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="roadProjects[]" value="راه‌های دسترسی صنعتی و لجستیکی">
+            راه‌های دسترسی صنعتی و لجستیکی
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="roadProjects[]" value="پل‌ها و ابنیه فنی مسیر">
+            پل‌ها و ابنیه فنی مسیر
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="roadProjects[]" value="تونل‌ها و مسیرهای خاص">
+            تونل‌ها و مسیرهای خاص
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="roadProjects[]" value="پایانه‌ها و مراکز لجستیکی جاده‌ای">
+            پایانه‌ها و مراکز لجستیکی جاده‌ای
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="roadProjects[]" value="سیستم‌های ایمنی، هوشمندسازی و ITS جاده‌ای">
+            سیستم‌های ایمنی، هوشمندسازی و ITS جاده‌ای
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="roadProjects[]" value="نگهداری، بهسازی و ارتقای شبکه راه">
+            نگهداری، بهسازی و ارتقای شبکه راه
+        </label><br>
+    </div>
+</div>
+
+	    </div>
+		</div>
+	    </div>
+		<div class="accordion">
+  <button type="button" onclick="toggleAccordion()">نوع خدمات</button>
+
+  <div class="panel" id="accordionPanel">
+		     <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">خدمات صنایع</div>
+            <div class="accordion-content">
+                <label><input type="checkbox" name="userType[]" value="تاسیس"> تاسیس</label><br>
+                <label><input type="checkbox" name="userType[]" value="توسعه"> توسعه</label><br>
+                <label><input type="checkbox" name="userType[]" value="بهره برداری"> بهره برداری</label><br>
+				<label><input type="checkbox" name="userType[]" value="اورهال"> اورهال</label><br>
+				<label><input type="checkbox" name="userType[]" value="لجستیک و زیرساختی"> لجستیک و زیرساختی</label><br>
+				<label><input type="checkbox" name="userType[]" value="ذخیره سازی"> ذخیره سازی</label><br>
+				<label><input type="checkbox" name="userType[]" value="فروش"> فروش</label><br>
+				<label><input type="checkbox" name="userType[]" value="خرید"> خرید</label><br>
+            </div>
+        </div>
+		 </div>
+	  </div>
+ <input type="submit" value="انتشار">
+       
+    </form>
+	
+	  
+	   </div>
+ <script src="file/form_manager.js" defer></script> <!-- لینک به فایل JavaScript -->
+</body>
+</html>
