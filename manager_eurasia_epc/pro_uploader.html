@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="file/pro_uploader.css"> <!-- لینک به فایل CSS -->
+   
+    <title>مدیریت اسناد پروژه</title>
+    <base target="_top">
+	 
+</head>
+<body>
+<button id="sidebar-toggle"><i class="fas fa-bars"></i></button>
+  
+  <div id="sidebar">
+  <header>
+      <span>مدیریت اسناد پروژه_____</span>
+    </header>
+       <div class="content">
+      <div class="accordion">
+        <button>منو</button>
+     <div class="panel">
+          <a href="pro_uploader.html">مدیریت اسناد پروژه</a>
+          <a href="form_manager.html">فرم انتشار پروژه</a>
+		  <a href="gallery_manager.html">گالری پروژه ها مدیریت</a>
+		  <a href="edit_table.html">ویرایش اطلاعات پروژه</a>
+          <a href="gallery_public.html">گالری پروژه های انتشار یافته</a>
+		  <a href="">ثبت نام اعضا</a>
+          <a href="">نمایش پروفایل اعضا</a>
+          <a href="">ویدئو کنفرانس</a>
+          <a href="">پیام ها</a>
+          <a href="">انتشار اطلاعیه فوری</a>
+		  <a href="">مدیریت قرار دادها</a>
+        </div>
+      </div>
+    </div>
+     
+    <h2>آپلود پروژه (ZIP)</h2>
+
+<input type="file" id="fileInput" accept=".zip">
+
+<input type="text" id="projectName" placeholder="نام پروژه">
+
+<button onclick="uploadProjectZip()">آپلود پروژه</button>
+
+
+    <!-- بخش ایجاد پوشه -->
+    <h2>ایجاد پوشه جدید</h2>
+    <input type="text" id="folderNameInput" placeholder="نام پوشه">
+    <button onclick="createFolder()">ایجاد پوشه</button>
+	
+	
+	<hr>
+
+<h3>📤 انتشار اسناد پروژه</h3>
+
+<input
+  type="text"
+  id="publishFolderId"
+  placeholder="آیدی فایل اسناد پروژه را وارد کنید"
+  style="width:100%;padding:8px;margin-bottom:8px"
+/>
+
+<button onclick="publishToGithub()" style="padding:8px 16px">
+  🚀 انتشار
+</button>
+
+<p id="publishResult" style="margin-top:10px;color:green"></p>
+
+</div>
+
+
+
+    <div id="editor-container">
+ <div id="editor">
+    <!-- مسیر جاری -->
+    <h3 id="currentPath">مسیر جاری: /</h3>
+
+    <!-- بخش مدیریت فایل‌ها -->
+    <button onclick="goBackFolder()">⬅️ برگشت</button>
+
+    <div id="fileList">در حال بارگذاری فایل‌ها...</div>
+	<!-- دکمه برای پیش‌نمایش و رفرش کردن آیفریم -->
+	</div>
+	<div id="preview">
+<button onclick="refreshIframe()">پیش‌نمایش</button>
+<h2>نمایش فایل‌های داخل پوشه</h2>
+<iframe id="driveIframe" 
+        src="https://drive.google.com/embeddedfolderview?id=1A7r1NzGB8tZpc5l9xv_LEEJiWk6Gi96B#grid" 
+        width="100%" 
+        height="600px" 
+        frameborder="0" 
+        style="overflow:auto;">
+</iframe>
+</div>
+</div>
+ <script src="file/pro_uploader.js" defer></script> <!-- لینک به فایل JavaScript -->
+</body>
+</html>

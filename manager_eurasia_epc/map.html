@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقشه موقعیت مکانی با OpenStreetMap</title>
+    <!-- اضافه کردن CSS برای Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<link rel="stylesheet" href="file/map style.css">
+    <script  src="file/map script.js"></script>
+   
+</head>
+<body>
+   <div class="header">
+   <button id="showUserLocationBtn">نمایش موقعیت</button>
+    <button id="deleteBtn" disabled>ححذف مارکر</button>
+    <button id="copyBtn" disabled>کپی موقعیت</button>
+    <div id="coordinates">طول و عرض جغرافیایی</div>
+	</div>
+    <div id="map"></div>
+    
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+   
+</body>
+</html>
