@@ -1,116 +1,0 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <title>ویرایشگر جدول پروژه ها</title>
-  <link rel="stylesheet" href="file/edit_table.css"> <!-- لینک به فایل CSS -->
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<button id="sidebar-toggle"><i class="fas fa-bars"></i></button>
- <div id="sidebar">
-    <header>
-      <span>پنل ویرایش محتوی جدول پروژه ها</span>
-    </header>
-   <div class="content">
-   
-     <div class="content">
-      <div class="accordion">
-        <button>منو</button>
-       <div class="panel">
-          <a href="pro_uploader.html">مدیریت اسناد پروژه</a>
-          <a href="form_manager.html">فرم انتشار پروژه</a>
-		  <a href="gallery_manager.html">گالری پروژه ها مدیریت</a>
-		  <a href="edit_table.html">ویرایش اطلاعات پروژه</a>
-          <a href="gallery_public.html">گالری پروژه های انتشار یافته</a>
-		  <a href="">ثبت نام اعضا</a>
-          <a href="">نمایش پروفایل اعضا</a>
-          <a href="">ویدئو کنفرانس</a>
-          <a href="">پیام ها</a>
-          <a href="">انتشار اطلاعیه فوری</a>
-		  <a href="">مدیریت قرار دادها</a>
-        </div>
-      </div>
-    </div>
-	</div>
-	</div>
-<form id="editCellForm">
-  <h2>پنل ویرایش محتوی جدول پروژه ها</h2>
-
-  <label for="rowId">شماره ردیف را وارد کنید(شماره1=عنوان های جدول_شماره2=کارت اول_شماره3=کارت دوم و...):</label>
-  <input type="number" id="rowId" required>
-
-<select id="colId" name="colId" required>
-  <option value="">-- انتخاب ستون --</option>
-  <option value="1">A (تاریخ و ساعت ثبت پروژه)</option>
-  <option value="2">B (ایمیل انتشار دهنده)</option>
-  <option value="3">C (عنوان آلبوم پروژه)</option>
-  <option value="4">D (دسته بندی پروژه)</option>
-  <option value="5">E (آیدی فرم انتشار دهنده)</option>
-  <option value="6">F (بودجه)</option>
-  <option value="7">G (موقعیت جغرافیایی)</option>
-  <option value="8">H (زمان انقضاء آگهی)</option>
-  <option value="9">I (وضعیت دسترسی)</option>
-  <option value="10">J (شرکت ارائه دهنده پروژه)</option>
-  <option value="11">K (شرکت واسطم)</option>
-  <option value="12">L (توضیحات اختصاصی)</option>
-  <option value="13">M (آیدی فایل پروژه)</option>
-  <option value="14">N (آیدی کاور پروژه)</option>
-  <option value="15">O (آی دی عکس اول)</option>
-  <option value="16">P (آی دی عکس دوم)</option></option>
-  <option value="17">Q (آی دی عکس سوم)</option></option>
-  <option value="18">R (آی دی عکس چهارم)</option>
-  <option value="19">S (آی دی عکس پنجم)</option>
-  <option value="20">T (عنوان اصلی پروژه)</option>
-  <option value="21">U (مجوز انتشار پروژه)</option>
-  <option value="22">V</option>
-  <option value="23">W</option>
-  <option value="24">X</option>
-  <option value="25">Y</option>
-  <option value="26">Z</option>
-  
-  
-  
-
-</select>
-
-
-  <button type="button" id="loadBtn">بارگذاری محتوا</button>
-
-<label for="statusSelector">تعیین وضعیت پروژه و انتشار پروژه:</label>
-<select id="statusSelector">
-  <option value="">-- انتخاب وضعیت --</option>
-  <option value="🌍">عمومی 🌍</option>
-      <option value="🔒">اختصاصی 🔒</option>
-      <option value="⛔">خاتمه ⛔</option>
-	  <option value="🔄">تمدید 🔄</option>
-	  <option value="✅">اجازه نمایش دارد ✅</option>
-	  <option value="❌">عدم نمایش ❌</option>
-	  
-</select>
-
-<!-- نمایش گرافیکی وضعیت -->
-<div id="statusPreview" style="margin: 10px 0; font-weight: bold;"></div>
-
-<!-- دکمه چسباندن به TextArea -->
-<button type="button" onclick="pasteStatus()">چسباندن به تکست ادیتور</button>
-
-
-<!-- Textarea اصلی شما -->
-<label for="cellContent">محتوای سلول:</label>
-<textarea id="cellContent" name="cellContent" rows="6" style="width: 100%;"></textarea>
-
-
-  <button type="submit">ذخیره تغییرات</button>
-  <label for="deleteRowId">شماره کارت را وارد کنید(شماره1=کارت اول _ شماره2=کارت دوم  و...):</label>
-<input type="number" id="deleteRowId">
-<button type="button" id="deleteBtn" style="background-color:red;">حذف ردیف</button>
-</form>
-
-
- 
- <script src="file/edit_table.js" defer></script> <!-- لینک به فایل JavaScript -->
-</body>
-</html>
